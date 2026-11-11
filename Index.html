@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Một lời muốn nói ❤️</title>
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ffd1dc, #fff0f5);
+  overflow: hidden;
+}
+.content {
+  padding: 25px;
+}
+h1 {
+  color: #e84378;
+  font-size: 38px;
+}
+p {
+  color: #a83261;
+  font-size: 19px;
+}
+.heart {
+  position: absolute;
+  bottom: -30px;
+  animation: fly 5s linear infinite;
+}
+@keyframes fly {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+<body>
+<div class="content">
+  <h1>Tớ thích cậu ❤️</h1>
+  <p>Không biết cậu có biết không?</p>
+  <p>♡ Một điều tớ muốn nói từ lâu ♡</p>
+</div>
+<script>
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.textContent = "❤️";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = "20px";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 5000);
+}, 400);
+</script>
+</body>
+</html>
+
